@@ -18,7 +18,7 @@ pipeline {
                          allowMissing: false,
                          alwaysLinkToLastBuild: false,
                          keepAll: true,
-                         reportDir: '/var/lib/jenkins/workspace/htmlreports/JaCoCo_20Report',
+                         reportDir: '${project.build.directory}/htmlreports/JaCoCo_20Report',
                          reportFiles: 'index.html',
                          reportName: "JaCoCo Report"
                     ])
