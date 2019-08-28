@@ -15,7 +15,10 @@ pipeline {
                steps {
                     sh "./mvnw jacoco:report"
                     publishHTML (target: [
-                         reportDir: '.',
+                         allowMissing: false,
+                         alwaysLinkToLastBuild: false,
+                         keepAll: true,
+                         reportDir: 'htmlreports/JaCoCo_20Report',
                          reportFiles: 'index.html',
                          reportName: "JaCoCo Report"
                     ])
