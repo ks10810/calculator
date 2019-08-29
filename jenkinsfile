@@ -38,11 +38,10 @@ pipeline {
                     sh "docker push localhost:5000/calculator"
                }
           }
-         stage("foo") {
+         stage("Approve launch") {
              steps {
                  script {
-                     env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!',
-                             parameters: [choice(name: 'RELEASE_SCOPE', choices: 'patch\nminor\nmajor', description: 'What is the release scope?')]
+                     env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!'
                  }
                  echo "${env.RELEASE_SCOPE}"
              }
