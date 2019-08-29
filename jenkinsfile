@@ -40,7 +40,7 @@ pipeline {
           }
           stage("Deploy to staging") {
                steps {
-                    sh "/var/lib/jenkins/workspace/killCalc.sh"
+                    sh "docker ps -q --filter 'name=calculator' | grep -q . && docker rm -fv calculator"
                     sh "docker run -d --rm -p 9090:8080 --name calculator localhost:5000/calculator"
                }
           }
