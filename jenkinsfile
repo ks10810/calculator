@@ -38,9 +38,13 @@ pipeline {
                     sh "docker push localhost:5000/calculator"
                }
           }
+          stage("Remove container") {
+               steps {
+                    sh "docker ps -q --filter 'name=calculator' | grep -q . && docker rm -fv calculator || true"
+               }
+          }
           stage("Deploy to staging") {
                steps {
-                    sh "docker rm -f calculator &>/dev/null && echo 'Removed old container'"
                     sh "docker run -d --rm -p 9090:8080 --name calculator localhost:5000/calculator"
                }
           }
