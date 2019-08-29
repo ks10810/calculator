@@ -38,6 +38,10 @@ pipeline {
                     sh "docker push localhost:5000/calculator"
                }
           }
+stage('Deploy approval'){
+    input "Deploy to prod?"
+}
+
           stage("Remove container") {
                steps {
                     sh "docker ps -q --filter 'name=calculator' | grep -q . && docker rm -fv calculator || true"
