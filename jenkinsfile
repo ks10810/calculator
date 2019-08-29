@@ -41,7 +41,7 @@ pipeline {
          stage("Approve launch") {
              steps {
                  script {
-                     env.RELEASE_SCOPE = input message: 'User input required', ok: 'Release!'
+                     env.RELEASE_SCOPE = input message: 'Release to staging?', ok: 'Release!'
                  }
                  echo "${env.RELEASE_SCOPE}"
              }
