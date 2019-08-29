@@ -15,6 +15,7 @@ public class CalculatorController {
     String sum(@RequestParam("a") Integer a, @RequestParam("b") Integer b) {
 
         // This is a test to see if the build is run on the check-in....
-        return "" + a + " + " + b + " = " + String.valueOf(calculator.sum(a, b));
+//        return "" + a + " + " + b + " = " + String.valueOf(calculator.sum(a, b));
+        return String.valueOf(calculator.sum(a, b));
     }
 }
