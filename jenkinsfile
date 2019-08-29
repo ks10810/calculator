@@ -45,7 +45,7 @@ pipeline {
           }
           stage("Launch staging") {
                steps {
-                    sh "docker run -d --restart=always --rm -p 9090:8080 --name calculator localhost:5000/calculator"
+                    sh "docker run -d --restart=always -p 9090:8080 --name calculator localhost:5000/calculator"
                }
           }
      }
