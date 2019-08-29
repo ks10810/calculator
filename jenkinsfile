@@ -38,14 +38,14 @@ pipeline {
                     sh "docker push localhost:5000/calculator"
                }
           }
-         stage("Approve launch") {
+/*         stage("Approve launch") {
              steps {
                  script {
                      env.RELEASE_SCOPE = input message: 'Release to staging?', ok: 'Release!'
                  }
                  echo "${env.RELEASE_SCOPE}"
              }
-         }
+          }*/
           stage("Remove container") {
                steps {
                     sh "docker ps -q --filter 'name=calculator' | grep -q . && docker rm -fv calculator || true"
