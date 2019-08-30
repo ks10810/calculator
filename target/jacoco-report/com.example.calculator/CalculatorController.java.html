@@ -14,8 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
     @RequestMapping(&quot;/sum&quot;)
     String sum(@RequestParam(&quot;a&quot;) Integer a, @RequestParam(&quot;b&quot;) Integer b) {
 
-        // This is a test to see if the build is run on the check-in
-<span class="nc" id="L18">        return String.valueOf(calculator.sum(a, b));</span>
+        // This is a test to see if the build is run on the check-in....
+//        return &quot;&quot; + a + &quot; + &quot; + b + &quot; = &quot; + String.valueOf(calculator.sum(a, b));
+<span class="nc" id="L19">        return String.valueOf(calculator.sum(a, b));</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.4.201905082037</span></div></body></html>
