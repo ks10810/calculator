@@ -135,7 +135,7 @@
                                 <include>**/AcceptanceTest.*</include>
                             </includes>
                             <excludes>
-                                <exclude>**/CalculatorTest*.java</exclude>
+                                <exclude>**/CalculatorTest.java</exclude>
                             </excludes>
                         </configuration>
                     </execution>

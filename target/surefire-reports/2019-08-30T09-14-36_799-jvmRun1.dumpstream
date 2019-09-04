@@ -1,0 +1,17 @@
+# Created at 2019-08-30T09:14:52.817
+TestSet has not finished before stream error has appeared >> initializing exit by non-null configuration: DEFAULT
+java.io.EOFException
+	at java.io.DataInputStream.readInt(DataInputStream.java:392)
+	at org.apache.maven.surefire.booter.MasterProcessCommand.decode(MasterProcessCommand.java:115)
+	at org.apache.maven.surefire.booter.CommandReader$CommandRunnable.run(CommandReader.java:391)
+	at java.lang.Thread.run(Thread.java:748)
+
+
+# Created at 2019-08-30T09:15:01.845
+Unexpected IOException: 7,1,Calculator,Sum two numbers(Calculator),null,I/O error on GET request for "http://infrastructure:9000/sum": Connection timed out: connect; nested exception is java.net.ConnectException: Connection timed out: connect,null,I/O error on GET request for "http://infrastructure:9000/sum": Connection timed out: connect; nested exception is java.net.ConnectException: Connection timed out: connect,I/O error on GET request for "http://infrastructure:9000/sum": Connection timed out: connect; nested exception is java.net.ConnectException: Connection timed out: connect,org.springframework.web.client.ResourceAccessException: I/O error on GET request for "http://infrastructure:9000/sum": Connection timed out: connect; nested exception is java.net.ConnectException: Connection timed out: connect\000ACaused by: java.net.ConnectException: Connection timed out: connect\000A
+
+
+# Created at 2019-08-30T09:15:01.851
+Unexpected IOException: 2,1,org.apache.maven.surefire.junit4.JUnit4Provider,acceptance.AcceptanceTest,null,null,null
+
+
