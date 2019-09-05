@@ -39,9 +39,7 @@ pipeline {
                }
           }
           stage("Docker Image Vul Scan") {
-               steps {
-                    aquaMicroscanner imageName: 'localhost:5000/calculator', notCompliesCmd: 'exit 1', onDisallowed: 'fail'
-               }
+               aquaMicroscanner imageName: 'localhost:5000/calculator', notCompliesCmd: 'exit 1', onDisallowed: 'fail'
           }
 
 
