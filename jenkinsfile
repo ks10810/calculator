@@ -38,7 +38,7 @@ pipeline {
                     sh "docker push localhost:5000/calculator"
                }
           }
-          stage("Docker Image Vul Scan") {
+          stage("Image Vul Scan") {
                 steps {
                     aquaMicroscanner imageName: 'localhost:5000/calculator', notCompliesCmd: 'exit 1', onDisallowed: 'fail', outputFormat: 'html'
                 }
