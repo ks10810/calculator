@@ -43,10 +43,6 @@ pipeline {
                     aquaMicroscanner imageName: 'localhost:5000/calculator', notCompliesCmd: 'exit 1', onDisallowed: 'fail', outputFormat: 'html'
                 }
           }
-
-
-
-
 /*         stage("Approve launch") {
              steps {
                  script {
