@@ -7,6 +7,6 @@ public class Calculator {
 
     int sum(int a, int b) {
         // Some comment
-        return a + b;
+        return a - b;
     }
 }
